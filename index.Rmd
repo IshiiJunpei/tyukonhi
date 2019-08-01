@@ -21,6 +21,15 @@ author: "@ishiijunpei"
 
 <br>
 
+## 忠魂碑年表
+
+```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE,fig.width=10, fig.height=7}
+read.csv("nenpyou.csv")%>%kable()
+
+```
+
+<br>
+
 ## 明治19年のあっさぶ
 
 明治19年に描かれた『鶉山道図鑑』にはちょうど忠魂碑のあたりから描かれたと思われる図があります。当時の本町周辺にはほとんど人家のない原野が広がっていたようです。
@@ -71,17 +80,24 @@ author: "@ishiijunpei"
 </div>
 
 <br>
+
+# 遺族会活動と厚沢部遺族会
+
+国際平和への誓いを新たにし、戦没者の追悼と相互の福祉の援護を目的として設立されました。戦没者慰霊事業を中心に活動を行っています。
+
+昭和20年の敗戦後、GHQからの指令により慰霊祭や追悼式が禁止され、軍人恩給も停止されることとなりました。このため、戦争遺族は物身両面で辛い思いをすることとなりました。昭和22年に日本遺族会の前身である「日本遺族厚生連盟」が結成され、遺族支援の機運が高まりました。
+
+厚沢部町遺族会も日本遺族会傘下の団体として、慰霊事業のほか、慰霊友好事業への会員派遣に取り組んでいます。
+
+<br>
 <br>
 <br>
 
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="クリエイティブ・コモンズ・ライセンス" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />この 記事 は <a rel="license" href="http://creativecommons.org/licenses/by/4.df0/">クリエイティブ・コモンズ 表示 4.0 国際 ライセンスの下に提供されています。</a>
 
-[](
-pandoc index.md -s --self-contained -t html5 -c github.css -o index.html
-pandoc -s index.md  -s --self-contained -t html5 -c github.css -o  index.html
-)
 
 ```{r echo=FALSE,eval=FALSE}
+library(tidyverse)
 library(knitr)
 library(rmarkdown)
 render("index.Rmd",html_document(theme =  "cosmo"),"index.html")
